@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Template Main CSS File -->
+    <title>Estimated Age Results</title>
+    <style>
+    body {
+    text-align: center;
+
+    }
+      h3 {
+        text-align: center;
+        margin-top: 20px;
+      }
+      img {
+        display: block;
+        width:30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+      a {
+        text-decoration: none;
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Estimated Age is: {{ predicted_months }} months</h3>
+    <img src="{{ url_for('static', filename='result/selected_file.png') }}" alt="selected file">
+      <a href="http://localhost:5000/" class="btn btn-outline-danger">Browse for another picture</a>
+
+  </body>
+</html>
